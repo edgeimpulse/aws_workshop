@@ -10,6 +10,10 @@ The easiest way to setup Raspberry Pi OS is to follow the instructions here afte
 
 Instructions: [Install Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-Once installed and booted, your RPi5 device should be ready to install the Java runtime - a required component to run AWS IoT Greengrass "Classic".  Let's go!
+Once installed and booted, your RPi5 device should be ready to install the Java runtime - a required component to run AWS IoT Greengrass "Classic". 
+
+Please save off the IP address of your edge device along with login credentials to remote SSH into the edge device. You'll need these in the next steps. 
+
+Let's go!
 
 [Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
