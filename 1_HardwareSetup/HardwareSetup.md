@@ -6,18 +6,6 @@ title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
 
 First, an edge device must be setup. In the following sections, Linux-compatible edge devices are detailed to enable them to receive and run as a AWS IoT Greengrass edge device. The list of supported devices will grow over time. 
 
+Please select one of the following and follow the "Setup" link...
 
-### Option 1 Hardware Setup - Raspberry Pi 5
-
-The Raspberry Pi 5 is a super simple device that is fully supported by Edge Impulse and AWS as an edge device. 
-
-First step in this exercise is to install the latest version of the Raspberry Pi OS onto your RPi. A SD card will be required and typically should be at least 16GB in size. 
-
-The easiest way to setup Raspberry Pi OS is to follow the instructions here after downloading and installing the Raspberry Pi Imager application:
-
-![Raspberry Pi Imager](RPi_Imager.png)
-
-Instructions: [Install Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-
-Once installed and booted, your RPi5 device should be ready to install the Java runtime - a required component to run AWS IoT Greengrass "Classic".  Let's go!
-
+### Option 1 Raspberry Pi 5 [Setup](./HardwareSetupRPi5.md)
