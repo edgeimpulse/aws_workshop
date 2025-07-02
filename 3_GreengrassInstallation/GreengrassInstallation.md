@@ -57,3 +57,5 @@ To modify the role, from the AWS Console -> IAM -> Roles search for "GreengrassV
 When done, your GreengrassV2TokenExchangeRole should now show that it has "AWSIoTFullAccess", "S3FullAccess" and "SecretsManagerReadWrite" permissions added to it.
 
 Next, we will pull over and configure the EdgeImpulse Custom component used to deploy Edge Impulses' model execution runtime. Lets do this!
+
+[Next](../4_SecretsManagerSetup/SecretsManagerSetup.md)

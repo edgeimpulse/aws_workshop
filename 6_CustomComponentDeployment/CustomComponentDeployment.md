@@ -14,3 +14,4 @@ Now that our custom component has been deployed, the component will install Edge
 
 
 
+[Next](../7_Running/Running.md)

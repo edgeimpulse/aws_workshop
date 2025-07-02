@@ -106,3 +106,5 @@ Press "Add new API key" on the upper right side. Provide a name for the key. The
 You will then be presented with the API key. Make a copy of this key as this will be the only time you will be able to see the full key for copying. We will place this key into AWS Secret Manager shortly so be sure to save it now!!
 
 OK!  We are making good progress!  Next up, we are going to install AWS IoT Greengrass into our edge device. Lets go!
+
+[Next](../3_GreengrassInstallation/GreengrassInstallation.md)

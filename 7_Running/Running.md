@@ -10,3 +10,5 @@ After the deployment is initiated, on the FIRST invocation of a given deployment
 While the components are running, in addition to the /greengrass/v2/logs directory, each component has a runtime log in /tmp.  The format of the log file is: "ei\_lockfile\_[linux | runner | serial]\_\<EI DEVICE\>.log.  Users can "tail" that log file to watch the component while it is running. 
 
 Additionally, for Jetson-based devices where the model has been compiled specifically for that platform, one can expect to have a 2-3 minute delay in the model being loaded into the GPU memory for the first time.  Subsequent invocations will be very short. 
+
+[Next](../8_Summary/Summary.md)

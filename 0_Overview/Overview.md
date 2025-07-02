@@ -48,3 +48,5 @@ The "edge-impulse-run-impulse" service is typically used when you want to utiliz
 		/edgeimpulse/device/<EdgeImpulseDeviceName>/inference/output
 
 Next, we will being installation of AWS IoT Greengrass into our edge device!  Lets get started!
+
+[Next](../1_HardwareSetup/HardwareSetup.md)

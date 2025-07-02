@@ -21,3 +21,4 @@ Next, we will go into AWS Console -> Secrets Manager and press "Store a new secr
 
 Next we will install the EdgeImpulse Custom Greengrass Component we'll be using. 
 
+[Next](../5_EdgeImpulseCustomComponentInstallation/EdgeImpulseCustomComponentInstall.md)

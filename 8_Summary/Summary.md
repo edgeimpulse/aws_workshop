@@ -375,3 +375,7 @@ The command output will be published as follows with the clear cache results for
 		  }
 		}
 
+
+Congradulations!  You have completed this workshop!  Please select "Next" below to read a bit about cleaning up your AWS environment in order to minimize costs/etc (AWS workshop attendees: this will happen automatically for you)
+
+[Next](../9_Cleanup/Cleanup.md)
