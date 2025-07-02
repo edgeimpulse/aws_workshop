@@ -1,4 +1,4 @@
-### Gather and install an EdgeImpulse API Key into AWS Secrets Manager
+## Gather and install an EdgeImpulse API Key into AWS Secrets Manager
 
 First we have to create an API Key in Edge Impulse via the Studio. 
 

@@ -1,4 +1,6 @@
 
+## Greengrass Component Deployment
+
 ### Deploy the custom component to a selected Greengrass edge device or group of edge devices. 
 
 Almost done!  We can now go back to the AWS Console -> IoT Core -> Greengrass -> Deployments page and select a deployment (or create a new one!) to deploy our component down to as selected gateway or group of gateways as needed. 

@@ -1,7 +1,9 @@
 
+## Custom Component Creation
+
 ### Clone the repo to acquire the Edge Impulse Component recipes and artifacts
 
-Clone this repo to retrieve the Edge Impulse component recipes (yaml files) and the associated artifacts: [Repo](https://github.com/edgeimpulse/aws-greengrass-components). 
+Clone this [repo](https://github.com/edgeimpulse/aws-greengrass-components) to retrieve the Edge Impulse component recipes (yaml files) and the associated artifacts.
 
 ### Upload Edge Impulse Greengrass Component artifacts into AWS S3
 
