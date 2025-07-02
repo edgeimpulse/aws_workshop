@@ -6,6 +6,8 @@ title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
 
 The following sections outline how one installs AWS IoT Greengrass... then installs the Edge Impulse custom components for inclusion into a Greengrass deployment down to edge devices. 
 
+Log into your edge device via SSH and we'll start the process of installing/configuring Greengrass. 
+
 ### 1. Install AWS IoT Greengrass Prerequisites
 
 AWS IoT Greengrass is based on Java and thus a Java runtime must be installed. For most linux-based devices a suitable Java can be run by simply typing:
