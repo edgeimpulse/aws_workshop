@@ -6,4 +6,4 @@ While the components are running, in addition to the /greengrass/v2/logs directo
 
 Additionally, for Jetson-based devices where the model has been compiled specifically for that platform, one can expect to have a 2-3 minute delay in the model being loaded into the GPU memory for the first time.  Subsequent invocations will be very short. 
 
-[Next](../8_Summary/Summary.md)
+[Back](../6_CustomComponentDeployment/CustomComponentDeployment.md) [Next](../8_Summary/Summary.md)

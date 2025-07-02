@@ -11,4 +11,4 @@ Now that our custom component has been deployed, the component will install Edge
 
 
 
-[Next](../7_Running/Running.md)
+[Back](../5_EdgeImpulseCustomComponentInstallation/EdgeImpulseCustomComponentInstall.md) [Next](../7_Running/Running.md)

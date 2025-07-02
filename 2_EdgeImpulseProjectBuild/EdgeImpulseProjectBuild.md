@@ -105,4 +105,4 @@ You will then be presented with the API key. Make a copy of this key as this wil
 
 OK!  We are making good progress!  Next up, we are going to install AWS IoT Greengrass into our edge device. Lets go!
 
-[Next](../3_GreengrassInstallation/GreengrassInstallation.md)
+[Back](../1_HardwareSetup/HardwareSetup.md) [Next](../3_GreengrassInstallation/GreengrassInstallation.md)

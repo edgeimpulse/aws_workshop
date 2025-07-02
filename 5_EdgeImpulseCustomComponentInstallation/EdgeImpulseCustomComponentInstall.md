@@ -165,4 +165,4 @@ If formatting and artifact access checks out OK, you should have a newly created
 
 Next we will create a Greengrass Deployment to deploy our custom component to our edge devices. 
 
-[Next](../6_CustomComponentDeployment/CustomComponentDeployment.md)
+[Back](../4_SecretsManagerSetup/SecretManagerSetup.md) [Next](../6_CustomComponentDeployment/CustomComponentDeployment.md)
