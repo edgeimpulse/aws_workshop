@@ -1,7 +1,3 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
-
 ## Hardware Setup
 
 First, an edge device must be setup. In the following sections, Linux-compatible edge devices are detailed to enable them to receive and run as a AWS IoT Greengrass edge device. The list of supported devices will grow over time. 

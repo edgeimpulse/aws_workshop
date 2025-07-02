@@ -1,8 +1,4 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
-
-### Cleanup
+## Cleanup
 
 **AWS workshop attendees**: The temporary AWS account given to you will automatically be deleted. No other action is necessary at this time. 
 

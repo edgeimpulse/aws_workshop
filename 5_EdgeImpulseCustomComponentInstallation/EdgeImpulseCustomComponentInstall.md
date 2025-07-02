@@ -1,6 +1,3 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
 
 ### Clone the repo to acquire the Edge Impulse Component recipes and artifacts
 

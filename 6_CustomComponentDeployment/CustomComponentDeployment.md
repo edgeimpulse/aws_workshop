@@ -1,6 +1,3 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
 
 ### Deploy the custom component to a selected Greengrass edge device or group of edge devices. 
 

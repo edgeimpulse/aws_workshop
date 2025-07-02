@@ -1,7 +1,3 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
-
 ### Install RaspberryPi OS
 
 The Raspberry Pi 5 is a super simple device that is fully supported by Edge Impulse and AWS as an edge device. 

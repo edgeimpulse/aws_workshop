@@ -1,7 +1,3 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
-
 
 ## Creating our Edge Impulse Environment
 

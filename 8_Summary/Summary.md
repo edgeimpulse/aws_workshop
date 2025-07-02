@@ -1,6 +1,5 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
+
+## Summary 
 
 Congradulations!  You now have your Edge Impulse custom model deployed, at scale, to your edge devices.  
 

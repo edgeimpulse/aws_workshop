@@ -1,6 +1,3 @@
----
-title: Edge Impulse AWS IoTCore/Greengrass Integration Workshop
----
 
 ## AWS IoT Greengrass Installation
 
