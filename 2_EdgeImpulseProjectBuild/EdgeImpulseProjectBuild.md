@@ -75,13 +75,15 @@ What we want to do now is to deploy our model to a specific edge device type.  D
 
 ![Edge Impulse](EI_Project_5.png)
 
-Please select the appropriate choice and press "Build":
+Please select the appropriate choice and press "Build" (Example, for Raspberry Pi, choose "Linux(AARCH64)" to run the model on the CPU of the RPi:
 
 ![Edge Impulse](EI_Project_6.png)
 
-NOTE:  For these edge device choices, please select the "int8" option prior to pressing "Build". 
+	NOTE:  For these edge device choices, please select the "int8" option 
+	prior to pressing "Build". 
 
-NOTE: The "Linux(AARCH64)" is suitable for many Linux-class ARM-based 64bit devices where only the CPU will be used to run the model. 
+	NOTE: The "Linux(AARCH64)" is suitable for many Linux-class ARM-based 
+	64bit devices where only the CPU will be used to run the model. 
 
 Now that we have built our deployment, we are ready to move on to the next step - creating an API Key. Lets do this!
 
