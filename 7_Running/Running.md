@@ -96,6 +96,8 @@ and you should see your inferencing resuming. You should also see more inference
 
 Cool!  Congradulations!  You have completed this workshop!!
 
+[Back](../6_CustomComponentDeployment/CustomComponentDeployment.md) [Next](../8_Summary/Summary.md)
+
 #### Supplemental notes
 Below are a few additional notes regarding the component deployment, log files, launch times for some devices:
 
@@ -107,5 +109,3 @@ Below are a few additional notes regarding the component deployment, log files, 
 
 >**_NOTE:_**
 >Additionally, for Jetson-based devices where the model has been compiled specifically for that platform, one can expect to have a 2-3 minute delay in the model being loaded into the GPU memory for the first time.  Subsequent invocations will be very short. 
-
-[Back](../6_CustomComponentDeployment/CustomComponentDeployment.md) [Next](../8_Summary/Summary.md)
