@@ -1,7 +1,7 @@
 
 ## AWS IoT Greengrass Installation
 
-The following sections outline how one installs AWS IoT Greengrass... then installs the Edge Impulse custom components for inclusion into a Greengrass deployment down to edge devices. 
+The following sections outline how one installs AWS IoT Greengrass onto our edge device.  AWS IoT Greengrass is ideal to use to create deployments of software and settings down to edge devices in a very scalable fashion.  
 
 Log into your edge device via SSH and we'll start the process of installing/configuring Greengrass. 
 
