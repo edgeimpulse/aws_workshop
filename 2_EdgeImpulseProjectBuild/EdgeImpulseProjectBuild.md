@@ -19,7 +19,7 @@ If successful, you will be promoted as follows. Press "Click here to build your 
 
 You will be presented with a wizard to create a new default project:
 
-![Intro Wizard To create ML Model](EI_SignUp_4.png)
+![Intro Wizard To create ML Model](EI_SIgnUp_4.png)
 
 You can dismiss the wizard by pressing the "-" in the upper right hand corner... this will reveal your current new default project:
 
