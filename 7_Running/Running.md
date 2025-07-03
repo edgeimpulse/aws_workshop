@@ -16,11 +16,11 @@ You should now see both the imput (video either from file or from your edge devi
 
 ### Option 1: Edge devices with cameras
 
-You should be able to see live video of your camera. Point your camera at this picture:
+You should be able to see live video of your camera via the url above. Now, point your camera at this picture:
 
 ![CatsNDogs](./DogsAndCats.png)
 
-You should see that your model, running on the edge, is identifying both the dog and the cat!
+You should see that your model, running on the edge, is identifying both the dog and the cat! It should look something like this:
 
 ![CatsNDogs](./DogsAndCats_expected.png)
 
@@ -28,7 +28,11 @@ You should see that your model, running on the edge, is identifying both the dog
 
 In this case, you don't have a camera to use but your component is actually configured to pull its image data from local files installed by the optional non-camera component. 
 
+In this instance, a video of a cat will be shown. The url above should be displaying something similar to this:
+
 ![CatsNDogs](./Cats_expected.png)
+
+Now, if yours looks to be frozen... don't worry! It simply means that the "Runner" has completed playing the 90 second cat video.  The "Runner" service is now waiting for you to issue a "restart" command to replay the same video... please continue reading below... we'll outline how to dispatch the "restart" command via AWS IoTCore!
 
 ### AWS IoTCore Integration
 
