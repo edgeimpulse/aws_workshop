@@ -84,7 +84,7 @@ You'll then see the previous page and continue pressing "Next" until you get to 
 
 
 > **_NOTE:_**
-> The component deployment may take awhile depending on network speed/etc... the reason for this is that all of the require prerequisites to run the Edge Impulse "Runner" service have to be downloaded, setup, and installed. 
+> The component deployment may take awhile depending on network speed/etc... the reason for this is that all of the required prerequisites to run the Edge Impulse "Runner" service have to be downloaded, setup, and installed. 
 > 
 > Back on the edge device via SSH, you can "tail" two different files to watch the progress of the installation/setup as well as the component operation (as root):
 > 
