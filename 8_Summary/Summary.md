@@ -1,11 +1,15 @@
 
 ## Summary 
 
-Congradulations!  You now have your Edge Impulse custom model deployed, at scale, to your edge devices.  
+Congradulations!  You have completed this workshop!  Please select "Next" below to read a bit about cleaning up your AWS environment in order to minimize costs/etc (AWS workshop attendees: this will happen automatically for you)
 
-Lets take a look at some of the features present in the custom component we just deployed. These are accessible via IoTCore's pub/sub feature.
+[Back](../7_Running/Running.md) [Next](../9_Cleanup/Cleanup.md)
 
-## Model Metrics (January 2025 Integration Enhancements)
+### For More Information
+
+Below is some detailed reference information regarding the Edge Impulse AWS IoT Integration
+
+## Model Metrics
 
 Basic model metrics are now accumulated and published in the integration into IoT Core. The metrics will be published at specified intervals (per the "metrics\_sleeptime\_ms" component configuration parameter) to the following IoT Core topic:
 
@@ -31,7 +35,7 @@ The format of the model metrics output is as follows:
 		  "id": "e4faa78b-2a09-40d1-adfd-8e5fc32feb11"
 		}
 
-## Commands (January 2025 Integration Enhancements)
+## Command Reference
 
 In the 2025 January integration update, the following commands are now available with the Edge Impulse Greengrass Linux Runner Greengrass integration. The following commands are dispatched via the integration's IoT Core Topic as a JSON:
 
@@ -373,8 +377,3 @@ The command output will be published as follows with the clear cache results for
 		    }
 		  }
 		}
-
-
-Congradulations!  You have completed this workshop!  Please select "Next" below to read a bit about cleaning up your AWS environment in order to minimize costs/etc (AWS workshop attendees: this will happen automatically for you)
-
-[Back](../7_Running/Running.md) [Next](../9_Cleanup/Cleanup.md)
