@@ -12,7 +12,7 @@ So, for example, if my public ip address of my edge device is "1.1.1.1", my url 
 
 		http://1.1.1.1:4912
 		
-You should now see both the imput (video either from file or from your edge devices attached camera) as well as inference results and inference times:
+You should now see both the imput (video either from file or from your edge devices attached camera) as well as inference results and inference times. There are two output scenarios depending on whether your edge device has a camera or does not have a camera... read below!
 
 ### Option 1: Edge devices with cameras
 
