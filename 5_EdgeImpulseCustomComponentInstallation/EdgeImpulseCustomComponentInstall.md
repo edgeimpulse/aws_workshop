@@ -39,7 +39,7 @@ Your S3 Bucket contents should look like this:
 		
 ### 3. Customize the component recipe files
 
-Next we need to customize our Greengrass component recipe files to reflect the actual location of our artifacts stored in S3.  Please replace ALL occurrences of "YOUR\_S3\_ARTIFACT\_BUCKET" with your S3 bucket name (i.e. "MyS3Bucket123"). Please do this for each of the 3 yaml files you have in your cloned repo under "./AWSGreengrassComponents". 
+Next we need to customize our Greengrass component recipe YAML file to reflect the actual location of our artifacts stored in S3.  Please replace ALL occurrences of "YOUR\_S3\_ARTIFACT\_BUCKET" with your S3 bucket name (i.e. "MyS3Bucket123"). Please do this to the "EdgeImpulseLinuxRunnerServiceComponent.yaml" file. Save the file.  
 
 Additionally, we can customize the defaulted configuration of your custom component by  editing, within each yaml file, the default configuration JSON.  Each yaml file's JSON is DIFFERENT... so don't edit one then copy to the other 2 yaml files... that will break your components.  You must edit each yaml file separately without copy/paste of this json information. 
 

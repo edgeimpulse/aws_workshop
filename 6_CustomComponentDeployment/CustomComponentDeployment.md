@@ -1,11 +1,11 @@
 
 ## Greengrass Component Deployment
 
-### (Non-Camera Edge Devices Only): Additional Custom Component 
+### 0. (Non-Camera Edge Devices Only): Additional Custom Component 
 
 If your edge device does not contain a camera (i.e. EC2 edge device), you will need to deploy an additional custom component. Please follow [these steps](./NonCameraCustomComponent.md) to get the additional component created. You will be selecting this component in addition to the custom component we created for the Edge Impulse "Runner" service. 
 
-### Deploy the custom component to a selected Greengrass edge device or group of edge devices. 
+### 1. Deploy the custom component to a selected Greengrass edge device or group of edge devices. 
 
 Almost done!  We can now go back to the AWS Console -> IoT Core -> Greengrass -> Deployments page and select a deployment (or create a new one!) to deploy our component down to as selected edge device or group of gateways as needed: 
 
