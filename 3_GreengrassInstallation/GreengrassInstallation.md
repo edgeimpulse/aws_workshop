@@ -9,9 +9,10 @@ Log into your edge device via SSH and we'll start the process of installing/conf
 
 AWS IoT Greengrass is based on Java and thus a Java runtime must be installed. For most linux-based devices a suitable Java can be run by simply typing:
 
-	Debian-based Linux:
-
-			% sudo apt install -y default-jdk
+	Debian-based Linux/Ubuntu:
+	
+			% sudo apt update	
+			% sudo apt install -y default-jdk unzip curl
 
 	Redhat-based Linux: 
 
