@@ -8,7 +8,7 @@ On your browser, open the following url:
 
 		http://<your edge devices public IP address>:4912
 		
-So, if my public ip address was "1.1.1.1" that would be:
+So, for example, if my public ip address of my edge device is "1.1.1.1", my url would be:
 
 		http://1.1.1.1:4912
 		
