@@ -1,11 +1,15 @@
 
-## Custom Component Creation
+## Edge Impulse "Runner" Service Custom Component 
 
-### Clone the repo to acquire the Edge Impulse Component recipes and artifacts
+We will utilize a Greengrass "Custom Component" to create and deploy the Edge Impulse runner service (the service that will run our Edge Impulse model on the edge device) including the required additional prerequisites (NodeJS install, libvips install). AWS IoT Greengrass' custom component feature is ideal to create custom components that can be specialized to prepare, run, and shutdown a given custom service. 
 
-Clone this [repo](https://github.com/edgeimpulse/aws-greengrass-components) to retrieve the Edge Impulse component recipes (yaml files) and the associated artifacts.
+Let's get started!
 
-### Upload Edge Impulse Greengrass Component artifacts into AWS S3
+### 1. Clone the repo to acquire the Edge Impulse Component recipes and artifacts
+
+Please clone this [repo](https://github.com/edgeimpulse/aws-greengrass-components) to retrieve the Edge Impulse component recipes (yaml files) and the associated artifacts.
+
+### 2. Upload Edge Impulse Greengrass Component artifacts into AWS S3
 
 First, you need to go to the S3 console in AWS via AWS Console -> S3. From there, you will create an S3 bucket.  For sake of example, we name this bucket "MyS3Bucket123". 
 
@@ -33,44 +37,13 @@ Your S3 Bucket contents should look like this:
 
 ![UploadToS3](S3_Upload_Artifacts.png)
 		
-### Customize the component recipe files
+### 3. Customize the component recipe files
 
 Next we need to customize our Greengrass component recipe files to reflect the actual location of our artifacts stored in S3.  Please replace ALL occurrences of "YOUR\_S3\_ARTIFACT\_BUCKET" with your S3 bucket name (i.e. "MyS3Bucket123"). Please do this for each of the 3 yaml files you have in your cloned repo under "./AWSGreengrassComponents". 
 
 Additionally, we can customize the defaulted configuration of your custom component by  editing, within each yaml file, the default configuration JSON.  Each yaml file's JSON is DIFFERENT... so don't edit one then copy to the other 2 yaml files... that will break your components.  You must edit each yaml file separately without copy/paste of this json information. 
 
 The default configuration contains the following attributes:
-
-		EdgeImpulseLinuxServiceComponent.yaml:
-		{
-			"node_version": "20.12.1",
-			"vips_version": "8.12.1",
-			"device_name": "MyEdgeImpulseDevice",
-			"launch": "linux",
-			"sleep_time_sec": 10,
-			"lock_filename": "/tmp/ei_lockfile_linux",
-			"gst_args": "__none__",
-			"eiparams": "--greengrass",
-			"iotcore_backoff": "5",
-			"iotcore_qos": "1",
-			"ei_bindir": "/usr/local/bin",
-			"ei_sm_secret_id": "EI_API_KEY",
-			"ei_sm_secret_name": "ei_api_key",
-			"ei_ggc_user_groups": "video audio input users",
-			"install_kvssink": "no",
-			"publish_inference_base64_image": "no",
-			"enable_cache_to_file": "no",
-			"ei_poll_sleeptime_ms": 2500,
-			"ei_local_model_file": "__none__",
-			"ei_shutdown_behavior": "__none__",
-			"cache_file_directory": "__none__",
-			"enable_threshold_limit": "no",
-			"metrics_sleeptime_ms": 30000,
-			"default_threshold": 50.0,
-			"threshold_criteria": "ge",
-			"enable_cache_to_s3": "no",
-			"s3_bucket": "__none__",
-		}
     	
 		EdgeImpulseLinuxRunnerServiceComponent.yaml:
 		{
@@ -103,18 +76,6 @@ The default configuration contains the following attributes:
 			"s3_bucket": "__none__",
 		}
     	
-		EdgeImpulseSerialRunnerServiceComponent.yaml:
-		{
-			"node_version": "20.12.1",
-			"device_name": "MyEdgeImpulseDevice",
-			"sleep_time_sec": 10,
-			"lock_filename": "/tmp/ei_lockfile_serial_runner",
-			"iotcore_backoff": "5",
-			"iotcore_qos": "1",
-			"ei_bindir": "/usr/local/bin",
-			"ei_ggc_user_groups": "video audio input users dialout"
-		}
-    	
 #### Attribute Description
 
 The attributes in each of the above default configurations is outlined below:
@@ -137,11 +98,6 @@ The attributes in each of the above default configurations is outlined below:
 * **publish\_inference\_base64\_image**: Option (default: "no", on: "yes") to include a base64 encoded image that the inference result was based on
 * **enable\_cache\_to\_file**: Option (default: "no", on: "yes") to enable both inference and associated image to get written to a specified local directory as a pair: <guid>.img  and <guid>.json for each inference identified with a <guid>
 * **cache\_file\_directory**: Option (default: "__none__") to specify the local directory when enable_cache_to_file is set to "yes"
-
-#### New options (January 2025 Integration Enhancements)
-
-In the 2025 updated integration, the following additional component recipe attributes are required: 
-
 * **ei\_poll\_sleeptime\_ms**: time (in ms) for the long polling message processor (typically leave as-is)
 * **ei\_local\_model\_file**: option to utilize a previously installed local model file
 * **ei\_shutdown\_behavior**: option to alter the shutdown behavior of the linux runner process. (can be set to "wait\_for\_restart" to cause the runner to pause after running the model and wait for the "restart" command to be issued (see "Commands" below for more details on the "restart" command))
@@ -152,7 +108,7 @@ In the 2025 updated integration, the following additional component recipe attri
 * **enable\_cache\_to\_s3**: option to enable caching the inference image/result to an AWS S3 bucket
 * **s3\_bucket**: name of the optional S3 bucket to cache results into
 
-### Register the custom component via its recipe file
+### 4. Register the custom component via its recipe file
 
 From the AWS Console -> IoT Core -> Greengrass -> Components, select "Create component". Then:
 

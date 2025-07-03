@@ -9,18 +9,65 @@ Log into your edge device via SSH and we'll start the process of installing/conf
 
 AWS IoT Greengrass is based on Java and thus a Java runtime must be installed. For most linux-based devices a suitable Java can be run by simply typing:
 
-	Debian-based Linux/Ubuntu:
+	Ubuntu/Debian-based Edge Devices:
 	
 			% sudo apt update	
 			% sudo apt install -y default-jdk unzip curl
 
-	Redhat-based Linux: 
+	RedHat/Fedora-based Edge Devices: 
 
 			% sudo yum install -y default-jdk
 
 Additionally, its recommended to update your linux device with the latest security patches and updates if available. 
 
-### 2. Install AWS IoT Greengrass
+### 2. Create AWS Administrator Credentials
+
+Prior to installing AWS IoT Greengrass, we need to create a set of AWS credentials that will be used as part of the installation process. 
+
+>**_NOTE:_**
+>These credentials may automatically be provided to you when you initiate the workshop has hosted by AWS Workshop Studio. If so, please copy the credentials as we'll need them in the next step. The credentials should look like this:
+>
+>		export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+>		export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+
+If you are using your personal AWS account and do not have the credentails created, you will need to create them. If you already have them, please skip the next step and proceed to step 3) below. 
+
+#### 2a. Creating Access Credentials (personal AWS Accounts)
+
+Please navigate to your AWS Dashboard and search for IAM:
+
+![IAM](GG_Install_iam.png)
+
+Launch the IAM Dashboard:
+
+![IAM](GG_Install_iam_dashboard.png)
+
+Select "Users" from the left hand side of the dashboard:
+
+![IAM](GG_Install_iam_2.png)
+
+Select your user, then select the "Security Credentials" tab:
+
+![IAM](GG_Install_iam_3.png)
+
+Press "Create access key":
+
+![IAM](GG_Install_iam_4.png)
+
+Choose "Other" and then press "Next":
+
+![IAM](GG_Install_iam_5.png)
+
+Set a description for the access key and then press "Create access key"
+
+![IAM](GG_Install_iam_6.png)
+
+You will now have the (only...) opportunity to copy and save off your credentials. Its best if you save them to a temp file that you'll read later in this format:
+
+	export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+	export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+
+### 3. Install AWS IoT Greengrass
 
 Greengrass is typically installed from within the AWS Console -> AWS IoT Core -> Greengrass -> Core Devices menu... select/press "Set up one core device". There are multiple ways to install Greengrass - "Nucleus Classic" is the version of Greengrass that is based on Java.  "Nucleus Lite" is a native version of Greengrass that is typically part of a Yocto-image based implementation. 
 
@@ -31,13 +78,6 @@ In this example, we choose the "Linux" device type and we are going to download 
 Lower down in the menu, you will see the specific instructions that are custom-crafted for you to download and invoke the "Nucleus Classic" installer. Note that you will have to have previously created and set, within your shell environment, an AWS Access Key (typically with Administrator privilege) in order to run the installer:
 
  ![CreateDevice](GG_Install_Device2.png)
-
-### 3. Install defaulted AWS IoT Greengrass components
-
-When doing a Greengrass installation/deployment, a default deployment for the target device will typically get created and that deployment will install the two components below.  If one is not created, it is recommended that you create a deployment in Greengrass for your newly added Greengrass edge device and add the following available AWS Components:
-
-			aws.greengrass.Cli
-			aws.greengrass.Nucleus
 
 ### 4. Modify the Greengrass TokenExchange Role with additional permissions
 
