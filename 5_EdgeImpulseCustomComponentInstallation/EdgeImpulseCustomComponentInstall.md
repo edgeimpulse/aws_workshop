@@ -19,19 +19,12 @@ Next, the following directory structure needs to be created your new bucket:
 
 		./artifacts/EdgeImpulseServiceComponent/1.0.0
 		
-Next, navigate to the "1.0.0" directory in your S3 bucket and then press "Upload" to upload the artifacts into the bucket. You need to upload the following files (these will be located in the ./artifacts/EdgeImpulseServiceComponent/1.0.0 from your cloned repo starting in the "AWSGreengrassComponents" subdirectory). Please upload ALL of these files into S3 at the above directory location:
-
-		aws-iotcore-connector.ts	
-		launch.sh			
+Next, navigate to the "1.0.0" directory in your S3 bucket and then press "Upload" to upload the artifacts into the bucket. You need to upload the following files (these will be located in the ./artifacts/EdgeImpulseServiceComponent/1.0.0 from your cloned repo). Please upload all of these files into S3 at the above directory location:
+			
+		install.sh
 		run.sh
-		aws-iotcore-serial-scraper.ts	
-		launch_serial.sh		
-		run_serial.sh
-		install.sh		
-		package.json			
+		launch.sh					
 		stop.sh
-		install_serial.sh		
-		parser.sh
 		
 Your S3 Bucket contents should look like this:
 
@@ -41,7 +34,7 @@ Your S3 Bucket contents should look like this:
 
 Next we need to customize our Greengrass component recipe YAML file to reflect the actual location of our artifacts stored in S3.  Please replace ALL occurrences of "YOUR\_S3\_ARTIFACT\_BUCKET" with your S3 bucket name (i.e. "MyS3Bucket123"). Please do this to the "EdgeImpulseLinuxRunnerServiceComponent.yaml" file. Save the file.  
 
-Additionally, we can customize the defaulted configuration of your custom component by  editing, within "EdgeImpulseLinuxRunnerServiceComponent.yaml" file, the default configuration JSON
+Also FYI, we can customize the defaulted configuration of your custom component by  editing, within "EdgeImpulseLinuxRunnerServiceComponent.yaml" file, the default configuration JSON. We won't need to do this for this workshop but its an useful option nonetheless. 
 
 The default configuration in "EdgeImpulseLinuxRunnerServiceComponent.yaml" contains the following JSON configuration settings for the component:
     	
