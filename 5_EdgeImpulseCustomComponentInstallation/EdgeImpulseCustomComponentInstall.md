@@ -41,9 +41,9 @@ Your S3 Bucket contents should look like this:
 
 Next we need to customize our Greengrass component recipe YAML file to reflect the actual location of our artifacts stored in S3.  Please replace ALL occurrences of "YOUR\_S3\_ARTIFACT\_BUCKET" with your S3 bucket name (i.e. "MyS3Bucket123"). Please do this to the "EdgeImpulseLinuxRunnerServiceComponent.yaml" file. Save the file.  
 
-Additionally, we can customize the defaulted configuration of your custom component by  editing, within each yaml file, the default configuration JSON.  Each yaml file's JSON is DIFFERENT... so don't edit one then copy to the other 2 yaml files... that will break your components.  You must edit each yaml file separately without copy/paste of this json information. 
+Additionally, we can customize the defaulted configuration of your custom component by  editing, within "EdgeImpulseLinuxRunnerServiceComponent.yaml" file, the default configuration JSON
 
-The default configuration contains the following attributes:
+The default configuration in "EdgeImpulseLinuxRunnerServiceComponent.yaml" contains the following JSON configuration settings for the component:
     	
 		EdgeImpulseLinuxRunnerServiceComponent.yaml:
 		{
@@ -114,12 +114,12 @@ From the AWS Console -> IoT Core -> Greengrass -> Components, select "Create com
 
 		1. Select the "yaml" option to Enter the recipe
 		2. Clear the text box to remove the default "hello world" yaml recipe
-		3. Copy/Paste the entire/edited contents of your EdgeImpulseLinuxServiceComponent.yaml file
+		3. Copy/Paste the entire/edited contents of your "EdgeImpulseLinuxRunnerServiceComponent.yaml" file
 		4. Press "Create Component"
 
 ![CreateComponent](GG_Create_Component.png)
 
-If formatting and artifact access checks out OK, you should have a newly created component listed in your Custom Components AWS dashboard.  
+If formatting and artifact access checks out OK, you should have a newly created component listed in your Custom Components AWS dashboard! 
 
 Next we will create a Greengrass Deployment to deploy our custom component to our edge devices. 
 
