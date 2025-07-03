@@ -75,7 +75,13 @@ In this example, we choose the "Linux" device type and we are going to download 
 
 ![CreateDevice](GG_Install_Device.png)
 
-Lower down in the menu, you will see the specific instructions that are custom-crafted for you to download and invoke the "Nucleus Classic" installer. Note that you will have to have previously created and set, within your shell environment, an AWS Access Key (typically with Administrator privilege) in order to run the installer:
+Lower down in the menu, you will see the specific instructions that are custom-crafted for you to download and invoke the "Nucleus Classic" installer. The basic sequence of instructions are:
+
+	1) Start with a SSH shell session into your edge device
+	2) copy and paste your two AWS credentials into the shell environment
+	3) copy and paste/run the installer download curl command into your shell
+	4) copy and paste/run the installer invocation command
+	5) wait for the installer to complete
 
  ![CreateDevice](GG_Install_Device2.png)
 
@@ -94,6 +100,8 @@ To modify the role, from the AWS Console -> IAM -> Roles search for "GreengrassV
 
 When done, your GreengrassV2TokenExchangeRole should now show that it has "AWSIoTFullAccess", "S3FullAccess" and "SecretsManagerReadWrite" permissions added to it.
 
-Next, we will pull over and configure the EdgeImpulse Custom component used to deploy Edge Impulses' model execution runtime. Lets do this!
+Next, we will clone and configure the EdgeImpulse "Runner" custom component used to deploy the Edge Impulse "Runner" model execution runtime. 
+
+Onward!
 
 [Back](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md) [Next](../4_SecretsManagerSetup/SecretManagerSetup.md)
