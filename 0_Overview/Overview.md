@@ -6,41 +6,43 @@ For more information about AWS IoT Core and AWS Greengrass please review: [AWS I
 
 ## Overview
 
-The Edge Impulse integration with AWS IoT Core and AWS IoT Greengrass is as follows:
+The Edge Impulse integration with AWS IoT Core and AWS IoT Greengrass is structured as follows:
 
 ![Architecture](Architecture.png)
 
-A few notable items:
+* The Edge Impulse "Runner" service now has a "--greengrass" option that enables the integration. 
+* AWS Secrets Manager is used to protect the Edge Impulse API Key by removing it from view via command line arguments.
+* The Edge Impulse "Runner" service can relay inference results into IoT Core for further processing in the cloud
+* The Edge Impulse "Runner" service relays model performance metrics, at configurable intervals, into IoTCore for further processing.
+* The Edge Impulse "Runner" service has accessible commands that can be used to configure the service real-time as well as retrieve information about the model/service/configuration.
+* More information regarding the Edge Impulse "Runner" service itself can be found [here](https://docs.edgeimpulse.com/docs/tools/edge-impulse-for-linux/linux-node-js-sdk).
 
-* Edge Impulse Linux/Runner services now have a "--greengrass" option that enables the integration. 
-* AWS Secrets Manager is used to protect the Edge Impulse API Key by removing it from view via command line arguments
-* The Greengrass Token Exchange Role must have Secrets Manager and IoT Core publication permission for the integration to operate correctly. 
-* Edge Impulse has several custom Greengrass components that can be deployed and run on the Greengrass-enabled edge device for several purposes outlined below. The component recipes and artifacts can be found here: [Repo](https://github.com/edgeimpulse/aws-greengrass-components).
+Edge Impulse has several custom Greengrass components that can be deployed and run on the Greengrass-enabled edge device to enable this integration. The component recipes and artifacts can be found [here](https://github.com/edgeimpulse/aws-greengrass-components). 
 
-For more information regarding the Edge Impulse Linux/Runner please review: [Edge Impulse for Linux Node.js SDK](https://docs.edgeimpulse.com/docs/tools/edge-impulse-for-linux/linux-node-js-sdk).
+Lets examine one of those components that we'll used for this workshop!
 
-#### "EdgeImpulseLinuxServiceComponent" Greengrass Component
+#### The "EdgeImpulseLinuxRunnerServiceComponent" Greengrass Component
 
-The "edge-impulse-linux-service" allows a linux-based edge device to register itself to the Edge Impulse studio service as a device capable of relaying its sensory (typically, camera, microphone, etc...) to the Edge Impulse service to be used for data creation and model testing. The associated Greengrass component for this service allows for easy/scalable deployment of this service to edge devices. 
-
->**_NOTE:_**
->This component will attempt to capture camera devices so typically it cannot be installed in the same edge device that has the "edge-impulse-linux-runner" component (described below) at the same time.
-
-#### "EdgeImpulseLinuxRunnerServiceComponent" Greengrass Component
-
-The "edge-impulse-linux-runner" service downloads, configures, installs, and executes an Edge Impulse model, developed for the specific edge device, and provides the ability to retrieve model inference results.  In this case, our component for this service will relay the inference results into AWS IoT Core under the following topic:
+The Edge Impulse "Runner" service downloads, configures, installs, and executes an Edge Impulse model, developed for the specific edge device, and provides the ability to retrieve model inference results.  In this case, our component for this service will relay the inference results into AWS IoT Core under the following topic:
 
 		/edgeimpulse/device/<EdgeImpulseDeviceName>/inference/output
 		
->**_NOTE:_**
->This component will attempt to capture camera devices so typically it cannot be installed in the same edge device that has the "edge-impulse-linux-runner" component (described prior) at the same time.
+Additionally, model performance metrics will be published, at defined intervals, here:
 
-#### "EdgeImpulseSerialRunnerServiceComponent" Greengrass Component
+		/edgeimpulse/device/<EdgeImpulseDeviceName>/model/metrics
+		
+Lastly, the Edge Impulse "Runner" service has been upgrade to support a set of bi-directional commands that can be accessed via publication of specific JSON structures to the following topic:
 
-The "edge-impulse-run-impulse" service is typically used when you want to utilize a MCU-based device to run the Edge Impulse model and you further want that device tethered to an edge device via serial/usb connections to allow its inference results to be relayed upstream.  Like with the "edge-impulse-linux-runner" service, the "edge-impulse-run-impulse" component will relay inference results into AWS IoT Core via the same topic structure:
+		/edgeimpulse/device/<EdgeImpulseDeviceName>/command/input
+		
+Command results are published to the following topic:
 
-		/edgeimpulse/device/<EdgeImpulseDeviceName>/inference/output
+		/edgeimpulse/device/<EdgeImpulseDeviceName>/command/output
 
-Next, we will setup our edge device!  Lets get started!
+The command reference, including JSON structure details, can be found [here](https://docs.edgeimpulse.com/docs/integrations/aws-greengrass#commands-january-2025-integration-enhancements).
+
+Lets dive deeper into this integration starting with setting up our own edge device!  
+
+Lets go!
 
 [Next](../1_HardwareSetup/HardwareSetup.md)
