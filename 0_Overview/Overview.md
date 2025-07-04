@@ -23,9 +23,8 @@ For more information regarding the Edge Impulse Linux/Runner please review: [Edg
 
 The "edge-impulse-linux-service" allows a linux-based edge device to register itself to the Edge Impulse studio service as a device capable of relaying its sensory (typically, camera, microphone, etc...) to the Edge Impulse service to be used for data creation and model testing. The associated Greengrass component for this service allows for easy/scalable deployment of this service to edge devices. 
 
-{% hint style="info" %}
-This component will attempt to capture camera devices so typically it cannot be installed in the same edge device that has the "edge-impulse-linux-runner" component (described below) at the same time.
-{% endhint %}
+>**_NOTE:_**
+>This component will attempt to capture camera devices so typically it cannot be installed in the same edge device that has the "edge-impulse-linux-runner" component (described below) at the same time.
 
 #### "EdgeImpulseLinuxRunnerServiceComponent" Greengrass Component
 
@@ -33,9 +32,8 @@ The "edge-impulse-linux-runner" service downloads, configures, installs, and exe
 
 		/edgeimpulse/device/<EdgeImpulseDeviceName>/inference/output
 		
-{% hint style="info" %}
-This component will attempt to capture camera devices so typically it cannot be installed in the same edge device that has the "edge-impulse-linux-runner" component (described prior) at the same time.
-{% endhint %} 
+>**_NOTE:_**
+>This component will attempt to capture camera devices so typically it cannot be installed in the same edge device that has the "edge-impulse-linux-runner" component (described prior) at the same time.
 
 #### "EdgeImpulseSerialRunnerServiceComponent" Greengrass Component
 
