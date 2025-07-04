@@ -17,11 +17,9 @@ The Edge Impulse integration with AWS IoT Core and AWS IoT Greengrass is structu
 * The Edge Impulse "Runner" service has accessible commands that can be used to configure the service real-time as well as retrieve information about the model/service/configuration.
 * More information regarding the Edge Impulse "Runner" service itself can be found [here](https://docs.edgeimpulse.com/docs/tools/edge-impulse-for-linux/linux-node-js-sdk).
 
-Edge Impulse has several custom Greengrass components that can be deployed and run on the Greengrass-enabled edge device to enable this integration. The component recipes and artifacts can be found [here](https://github.com/edgeimpulse/aws-greengrass-components). 
+Edge Impulse has several custom Greengrass components that can be deployed and run on the Greengrass-enabled edge device to enable this integration. The component recipes and artifacts can be found [here](https://github.com/edgeimpulse/aws-greengrass-components). Lets examine one of those components that we'll used for this workshop!
 
-Lets examine one of those components that we'll used for this workshop!
-
-#### The "EdgeImpulseLinuxRunnerServiceComponent" Greengrass Component
+### The "EdgeImpulseLinuxRunnerServiceComponent" Greengrass Component
 
 The Edge Impulse "Runner" service downloads, configures, installs, and executes an Edge Impulse model, developed for the specific edge device, and provides the ability to retrieve model inference results.  In this case, our component for this service will relay the inference results into AWS IoT Core under the following topic:
 
