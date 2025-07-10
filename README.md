@@ -2,7 +2,7 @@
 
 This is the Edge Impulse AWS Integration workshop. The workshop will step you through the process of creating a ML model, then deploying that model, via AWS IoT Greengrass to your own edge device. Once the ML model is running, inference results will be sent into AWS IoTCore for further potential processing. 
 
-Currently the workshop content is centered around the following edge devices:
+Currently the workshop content is centered around the following edge device types:
 
 * EC2 instance as a simulated edge device
 * Ubuntu-based devices (x64 and QC6490-based for example)
