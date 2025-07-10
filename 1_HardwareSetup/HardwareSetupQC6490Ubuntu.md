@@ -82,4 +82,4 @@ We are now setup!  Before we continue, please save off the following JSONs. Thes
 
 OK!  Lets continue by getting our Edge Impulse project setup! Let's go!
 
-[Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
+[Back](./HardwareSetup.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)

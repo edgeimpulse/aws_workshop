@@ -1,4 +1,4 @@
-### Install/Configure Ubuntu (X64-based devices)
+## Install/Configure Ubuntu (X64-based devices)
 
 The workshop will assume that the X64 edge device has been loaded with Ubuntu 20.04 or later per instructions found at the primary [Ubuntu website](https://www.ubuntu.com). 
 
@@ -82,4 +82,4 @@ We are now setup!  Before we continue, please save off the following JSONs. Thes
 
 OK!  Lets continue by getting our Edge Impulse project setup! Let's go!
 
-[Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
+[Back](./HardwareSetup.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)

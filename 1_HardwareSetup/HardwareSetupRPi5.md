@@ -1,3 +1,5 @@
+## Setup and configuration of Raspberry Pi 5 with Raspberry Pi OS
+
 ### Install RaspberryPi OS
 
 The Raspberry Pi 5 is a super simple device that is fully supported by Edge Impulse and AWS as an edge device. 
@@ -87,4 +89,4 @@ Additionally, please safe off these JSONs.  These will be used to customize our 
 
 Alright!  Lets continue by getting our Edge Impulse project setup! Let's go!
 
-[Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
+[Back](./HardwareSetup.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)

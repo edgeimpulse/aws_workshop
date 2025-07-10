@@ -1,3 +1,5 @@
+## Setup and Configuration for Ubuntu-based EC2 instance
+
 ### Create Ubuntu EC2 Instance
 
 AWS EC2 instances can be used to simulate edge devices when edge device hardware isn't available.  
@@ -95,4 +97,4 @@ Before we go to the next section, lets also save off this JSON - it will be used
 
 OK, Lets proceed to the next step and get our Edge Impulse environment setup!
 
-[Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
+[Back](./HardwareSetup.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
