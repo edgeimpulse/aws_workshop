@@ -34,44 +34,11 @@ Press "Next" again, then select our custom component and press "Configure Compon
 >**_NOTE:_**
 >If you also have the Non-Camera component, it does NOT need to be configured... only the "EdgeImpulseLinuxRunnerServiceComponent" should be configured
 
-We now see that our custom component has a default configuration. We can, however, customize it specifically for our specific deployment (i.e. to a specific device or group of similar devices...).  Lets customize our deployment by copying and pasting a new JSON into the "Configuration to merge" window followed by pressing "Confirm":
+#### Customizing a specific Deployment
 
->**_NOTE:_**
->As an example for this particular JSON, I am customizing the "device\_name" parameter as well as the "gst\_args" to pull input from a file vs. camera. This will be dependent on the actual edge device being used in the workshop. In this particular JSON, the EC2 edge device is assumed to be used. Because the EC2 edge device has no camera, we have to direct the model, using our gstreamer arguments, to take input from a file. Your workshop instructor should provide you with the correct JSON for your particular workshop and edge device(s). The entire JSON used in the example is this and is suitable for edge devices like the EC2 edge device (note the device\_name!). Only the "device\_name" and "gst\_args" keys are modified from their defaults:
->
-	{     
-	   "Parameters": { 
-	      "node_version": "20.18.2",
-	      "vips_version": "8.12.1",
-	      "device_name": "DougsEC2EdgeDevice",
-	      "launch": "runner",
-	      "sleep_time_sec": 10,
-	      "lock_filename": "/tmp/ei_lockfile_runner",
-	      "gst_args": "filesrc:location=/home/ggc_user/data/testSample.mp4:!:decodebin:!:videoconvert:!:videorate:!:video/x-raw,framerate=2200/1:!:jpegenc",
-	      "eiparams": "--greengrass",
-	      "iotcore_backoff": "-1",
-	      "iotcore_qos": "1",
-	      "ei_bindir": "/usr/local/bin",
-	      "ei_sm_secret_id": "EI_API_KEY",
-	      "ei_sm_secret_name": "ei_api_key",
-	      "ei_poll_sleeptime_ms": 2500,
-	      "ei_local_model_file": "/home/ggc_user/data/currentModel.eim",
-	      "ei_shutdown_behavior": "wait_on_restart",
-	      "ei_ggc_user_groups": "video audio input users system",
-	      "install_kvssink": "no",
-	      "publish_inference_base64_image": "no",
-	      "enable_cache_to_file": "no",
-	      "cache_file_directory": "__none__",
-	      "enable_threshold_limit": "no",
-	      "metrics_sleeptime_ms": 30000,
-	      "default_threshold": 50,
-	      "threshold_criteria": "ge",
-	      "enable_cache_to_s3": "no",
-	      "s3_bucket": "__none__" 
-	   }  
-	}  
+We now see that our custom component we registered has a default configuration. We can, however, customize it specifically for our specific hardware configuration (i.e. to a specific device or group of similar devices...).  
 
-Copy and paste the JSON into the "Configuration to merge" window and press "Confirm":
+First lets recall the JSON we saved off when we configured our hardware. Lets customize our Greengrass deployment by clearing, copying, and pasting that JSON into the "Configuration to merge" window... then press "Confirm":
 
 ![GGDeploy](GG_Create_Deployment_5.png)
 

@@ -14,9 +14,6 @@ AWS IoT Greengrass is based on Java and thus a Java runtime must be installed. F
 			% sudo apt update	
 			% sudo apt install -y default-jdk unzip curl
 
-	RedHat/Fedora-based Edge Devices: 
-
-			% sudo yum install -y default-jdk
 
 Additionally, its recommended to update your linux device with the latest security patches and updates if available. 
 

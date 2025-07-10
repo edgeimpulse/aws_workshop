@@ -4,9 +4,13 @@ First, an edge device must be setup. In the following sections, Linux-compatible
 
 Please select one of the following and follow the "Setup" link...
 
-### Option 1: Raspberry Pi 5 [Setup](./HardwareSetupRPi5.md)
+### Option 1: Ubuntu EC2 Instance [Setup](./HardwareSetupEC2.md)
 
-### Option 2: Ubuntu EC2 Instance [Setup](./HardwareSetupEC2.md)
+### Option 2: X64 device with Ubuntu [Setup](./HardwareSetupX64Ubuntu.md)
+
+### Option 3: Qualcomm QC6490 Platforms with Ubuntu [Setup](./HardwareSetupQC6490Ubuntu.md)
+
+### Option 4: Raspberry Pi 5 with RaspberryPi OS [Setup](./HardwareSetupRPi5.md)
 
 (more exciting device options will be added later)
 

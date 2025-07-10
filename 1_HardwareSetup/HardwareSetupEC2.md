@@ -55,6 +55,44 @@ You should see a login shell now for your EC2 instance!
 
 ![Login Shell](EC2_Setup_8.png)
 
-Excellent! You can keep that shell open as we'll make use of it when we start installing Greengrass a bit later. Lets proceed to the next step and get our Edge Impulse environment setup!
+Excellent! You can keep that shell open as we'll make use of it when we start installing Greengrass a bit later. 
+
+Before we go to the next section, lets also save off this JSON - it will be used to configure our AWS Greengrass custom component a bit later:
+
+#### Non-Camera configuration
+
+	{     
+	   "Parameters": { 
+	      "node_version": "20.18.2",
+	      "vips_version": "8.12.1",
+	      "device_name": "MyEC2EdgeDevice",
+	      "launch": "runner",
+	      "sleep_time_sec": 10,
+	      "lock_filename": "/tmp/ei_lockfile_runner",
+	      "gst_args": "filesrc:location=/home/ggc_user/data/testSample.mp4:!:decodebin:!:videoconvert:!:videorate:!:video/x-raw,framerate=2200/1:!:jpegenc",
+	      "eiparams": "--greengrass",
+	      "iotcore_backoff": "-1",
+	      "iotcore_qos": "1",
+	      "ei_bindir": "/usr/local/bin",
+	      "ei_sm_secret_id": "EI_API_KEY",
+	      "ei_sm_secret_name": "ei_api_key",
+	      "ei_poll_sleeptime_ms": 2500,
+	      "ei_local_model_file": "/home/ggc_user/data/currentModel.eim",
+	      "ei_shutdown_behavior": "wait_on_restart",
+	      "ei_ggc_user_groups": "video audio input users system",
+	      "install_kvssink": "no",
+	      "publish_inference_base64_image": "no",
+	      "enable_cache_to_file": "no",
+	      "cache_file_directory": "__none__",
+	      "enable_threshold_limit": "no",
+	      "metrics_sleeptime_ms": 30000,
+	      "default_threshold": 50,
+	      "threshold_criteria": "ge",
+	      "enable_cache_to_s3": "no",
+	      "s3_bucket": "__none__" 
+	   }  
+	}
+
+OK, Lets proceed to the next step and get our Edge Impulse environment setup!
 
 [Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)

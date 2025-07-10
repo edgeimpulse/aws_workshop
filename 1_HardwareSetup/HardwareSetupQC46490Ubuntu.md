@@ -1,20 +1,15 @@
-### Install RaspberryPi OS
+## Ubuntu-based QC6490 platforms
 
-The Raspberry Pi 5 is a super simple device that is fully supported by Edge Impulse and AWS as an edge device. 
+First, please flash your QC6490 device per your manufacturers instructions to load up Ubuntu onto the device.
 
-First step in this exercise is to install the latest version of the Raspberry Pi OS onto your RPi. A SD card will be required and typically should be at least 16GB in size. 
+### Additional Setup
 
-The easiest way to setup Raspberry Pi OS is to follow the instructions here after downloading and installing the Raspberry Pi Imager application:
+Once you have your Ubuntu platform installed and running, please run these commands to add some required dependencies:
 
-![Raspberry Pi Imager](RPi_Imager.png)
+	sudo apt install -y curl
+	sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
 
-Instructions: [Install Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-
-Once installed and booted, your RPi5 device should be ready to install the Java runtime - a required component to run AWS IoT Greengrass "Classic". 
-
-Please save off the IP address of your edge device along with login credentials to remote SSH into the edge device. You'll need these in the next steps. 
-
-Additionally, please safe off these JSONs.  These will be used to customize our AWS Greengrass custom component based upon using an RPi5 device with or without a camera:
+We are now setup!  Before we continue, please save off the following JSONs. These JSONs will be used to configure our AWS Greengrass deployment.
 
 #### Camera configuration
 
@@ -22,7 +17,7 @@ Additionally, please safe off these JSONs.  These will be used to customize our 
 	   "Parameters": {
 	      "node_version": "20.18.2",
 	      "vips_version": "8.12.1",
-	      "device_name": "MyRPi5EdgeDevice", 
+	      "device_name": "MyQC6490UbuntuEdgeDevice", 
 	      "launch": "runner",
 	      "sleep_time_sec": 10,
 	      "lock_filename": "/tmp/ei_lockfile_runner",
@@ -57,7 +52,7 @@ Additionally, please safe off these JSONs.  These will be used to customize our 
 	   "Parameters": { 
 	      "node_version": "20.18.2",
 	      "vips_version": "8.12.1",
-	      "device_name": "MyRPi5EdgeDevice",
+	      "device_name": "MyQC6490UbuntuEdgeDevice",
 	      "launch": "runner",
 	      "sleep_time_sec": 10,
 	      "lock_filename": "/tmp/ei_lockfile_runner",
@@ -85,6 +80,6 @@ Additionally, please safe off these JSONs.  These will be used to customize our 
 	   }  
 	}  
 
-Alright!  Lets continue by getting our Edge Impulse project setup! Let's go!
+OK!  Lets continue by getting our Edge Impulse project setup! Let's go!
 
 [Back](../0_Overview/Overview.md) [Next](../2_EdgeImpulseProjectBuild/EdgeImpulseProjectBuild.md)
