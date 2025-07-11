@@ -12,11 +12,25 @@ The easiest way to setup Raspberry Pi OS is to follow the instructions here afte
 
 Instructions: [Install Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-Once installed and booted, your RPi5 device should be ready to install the Java runtime - a required component to run AWS IoT Greengrass "Classic". 
-
 Please save off the IP address of your edge device along with login credentials to remote SSH into the edge device. You'll need these in the next steps. 
 
-Additionally, please safe off these JSONs.  These will be used to customize our AWS Greengrass custom component based upon using an RPi5 device with or without a camera:
+#### Additional Prerequisites
+
+First, lets open a shell into your RPi (using the Raspberry Pi OS default username of "pi" with password "raspberrypi" and having an IP address of 1.2.3.4):
+
+	ssh pi@1.2.3.4
+	
+Once logged in via ssh, lets install the prerequisites that we need. Please run these commands to add some required dependencies:
+
+	sudo apt update	
+	sudo apt install -y curl unzip
+	sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
+	
+Additionally, we need to install the prerequisites for AWS IoT Greengrass "classic":
+
+	sudo apt install -y default-jdk  
+
+Lastly, please safe off these JSONs.  These will be used to customize our AWS Greengrass custom component based upon using an RPi5 device with or without a camera:
 
 #### Camera configuration
 

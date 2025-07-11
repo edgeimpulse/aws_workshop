@@ -59,6 +59,16 @@ You should see a login shell now for your EC2 instance!
 
 Excellent! You can keep that shell open as we'll make use of it when we start installing Greengrass a bit later. 
 
+Lastly, lets install the prerequisites that we need. Please run these commands to add some required dependencies:
+
+	sudo apt update	
+	sudo apt install -y curl unzip
+	sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
+	
+Additionally, we need to install the prerequisites for AWS IoT Greengrass "classic":
+
+	sudo apt install -y default-jdk  
+
 Before we go to the next section, lets also save off this JSON - it will be used to configure our AWS Greengrass custom component a bit later:
 
 #### Non-Camera configuration
