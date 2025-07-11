@@ -5,19 +5,7 @@ The following sections outline how one installs AWS IoT Greengrass onto our edge
 
 Log into your edge device via SSH and we'll start the process of installing/configuring Greengrass. 
 
-### 1. Install AWS IoT Greengrass Prerequisites
-
-AWS IoT Greengrass is based on Java and thus a Java runtime must be installed. For most linux-based devices a suitable Java can be run by simply typing:
-
-	Ubuntu/Debian-based Edge Devices:
-	
-			% sudo apt update	
-			% sudo apt install -y default-jdk unzip curl
-
-
-Additionally, its recommended to update your linux device with the latest security patches and updates if available. 
-
-### 2. Create AWS Administrator Credentials
+### 1. Create AWS Administrator Credentials
 
 Prior to installing AWS IoT Greengrass, we need to create a set of AWS credentials that will be used as part of the installation process. 
 
@@ -29,7 +17,7 @@ Prior to installing AWS IoT Greengrass, we need to create a set of AWS credentia
 
 If you are using your personal AWS account and do not have the credentails created, you will need to create them. If you already have them, please skip the next step and proceed to step 3) below. 
 
-#### 2a. Creating Access Credentials (personal AWS Accounts)
+#### 1a. Creating Access Credentials (personal AWS Accounts)
 
 Please navigate to your AWS Dashboard and search for IAM:
 
@@ -64,7 +52,7 @@ You will now have the (only...) opportunity to copy and save off your credential
 	export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
 	export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
 
-### 3. Install AWS IoT Greengrass
+### 2. Install AWS IoT Greengrass
 
 Greengrass is typically installed from within the AWS Console -> AWS IoT Core -> Greengrass -> Core Devices menu... select/press "Set up one core device". There are multiple ways to install Greengrass - "Nucleus Classic" is the version of Greengrass that is based on Java.  "Nucleus Lite" is a native version of Greengrass that is typically part of a Yocto-image based implementation. 
 
@@ -82,7 +70,7 @@ Lower down in the menu, you will see the specific instructions that are custom-c
 
  ![CreateDevice](GG_Install_Device2.png)
 
-### 4. Modify the Greengrass TokenExchange Role with additional permissions
+### 3. Modify the Greengrass TokenExchange Role with additional permissions
 
 When you run a Greengrass component within Greengrass, a service user (typically a linux user called "ggc_user" for "Nucleus Classic" installations) invokes the component, as specified in the lifecycle section of your recipe. Credentials are passed to the invoked process via its environment (NOT by the login environment of the "Greengrassc_user"...) during the invocation spawning process. These credentials are used by by the spawned process (typically via the AWS SDK which is part of the spawned process...) to connect back to AWS and "do stuff". These permissions are controlled by a AWS IAM Role called "GreengrassV2TokenExchangeRole".  We need to modify that role and add "Full AWS IoT Core Permission" as well as "AWS Secrets Manager Read/Write" permission.
 

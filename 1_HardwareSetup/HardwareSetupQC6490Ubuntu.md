@@ -6,8 +6,15 @@ First, please flash your QC6490 device per your manufacturers instructions to lo
 
 Once you have your Ubuntu platform installed and running, please run these commands to add some required dependencies:
 
-	sudo apt install -y curl
+	sudo apt update	
+	sudo apt install -y curl unzip
 	sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
+	
+Additionally, we need to install the prerequisites for AWS IoT Greengrass "classic":
+
+	sudo apt install -y default-jdk 
+
+Lastly, its recommended to update your linux device with the latest security patches and updates if available. 
 
 We are now setup!  Before we continue, please save off the following JSONs. These JSONs will be used to configure our AWS Greengrass deployment.
 
