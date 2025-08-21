@@ -10,7 +10,9 @@ Please select one of the following and follow the "Setup" link...
 
 ### Option 3: Qualcomm QC6490 Platforms with Ubuntu [Setup](./HardwareSetupQC6490Ubuntu.md)
 
-### Option 4: Raspberry Pi 5 with RaspberryPi OS [Setup](./HardwareSetupRPi5.md)
+### Option 4: Nvidia Jetson Platforms with Jetpack 5.x/6.0 [Setup](./HardwareSetupNvidiaJetson.md)
+
+### Option 5: Raspberry Pi 5 with RaspberryPi OS [Setup](./HardwareSetupRPi5.md)
 
 (More exciting device options will be added soon. Stay tuned!)
 
