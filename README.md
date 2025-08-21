@@ -6,6 +6,7 @@ Currently the workshop content is centered around the following edge device type
 
 * EC2 instance as a simulated edge device
 * Ubuntu-based devices (x64 and QC6490-based for example)
+* Nvidia Jetson devices running Jetpack 5.x and/or 6.0
 * Raspberry Pi 5 running Raspberry Pi OS
 
 More device types are planned so stay tuned!
